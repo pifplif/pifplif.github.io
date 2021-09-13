@@ -6,11 +6,19 @@
 		<title>Counter</title>
 	</head>
 	<body>
-		<input type="button" name="minus" value="-">
-		<div id="number"></div>
-		<input type="button" name="plus" value="+">
+		<input type="button" name="minus" value="-" onclick="handleButton(this)">
+		<div id="number">0</div>
+		<input type="button" name="plus" value="+" onclick="handleButton(this)">
 		<script type="text/javascript">
-			document.getElementById('number').innerHTML = "0";
+			function handleButton(e) {
+				if (e.name === "minus") {
+					console.log(e.name);
+				} else if (e.name === "plus") {
+					console.log(e.name);
+				} else {
+					console.log("Err: click");
+				}
+			}
 		</script>
 	</body>
 </html>
